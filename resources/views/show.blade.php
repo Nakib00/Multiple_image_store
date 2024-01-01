@@ -46,7 +46,9 @@
                     <td>{{ $image->id }}</td>
                     <td>
                         @foreach(json_decode($image->image) as $imageName)
-                        <img src="{{ asset($imageName) }}" alt="{{ $imageName }}" />
+                            @if(is_string($imageName))
+                                <img src="{{ asset($imageName) }}" alt="{{ $imageName }}" />
+                            @endif
                         @endforeach
                     </td>
                 </tr>
