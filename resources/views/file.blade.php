@@ -14,7 +14,7 @@
     </nav>
     <div class="container">
         <h2>Upload Images</h2>
-        <form action="/file" method="post" enctype="multipart/form-data">
+        <form action="{{route('upload')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Select Images</label>

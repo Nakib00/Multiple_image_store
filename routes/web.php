@@ -13,6 +13,6 @@ Route::get('/file', function () {
 });
 
 
-Route::post('/file', [FileController::class, 'upload']);
+Route::post('/file', [FileController::class, 'upload'])->name('upload');
 
 Route::get('/show', [FileController::class, 'showImages'])->name('show');
